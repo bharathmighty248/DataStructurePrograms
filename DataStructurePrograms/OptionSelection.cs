@@ -14,8 +14,9 @@ namespace DataStructurePrograms
                 Console.WriteLine("\nWelcome To DataStructure Programs\n" +
                     "1. UnOrderedList\n" +
                     "2. OrderedList\n" +
-                    "3. Simple Balanced Parentheses\n" + 
-                    "4. End");
+                    "3. Simple Balanced Parentheses\n" +
+                    "4. Banking Cash Counter\n" + 
+                    "5. End");
                 Console.Write("Please Select One Option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
 
@@ -34,10 +35,14 @@ namespace DataStructurePrograms
                         balancedParentheses.CheckParentheses();
                         break;
                     case 4:
+                        BankingCashCounter<string> bankingCashCounter = new BankingCashCounter<string>();
+                        bankingCashCounter.CashCounter();
+                        break;
+                    case 5:
                         Console.WriteLine("\nThank you");
                         break;
                 }
-                if (option == 4)
+                if (option == 5)
                     break;
             }
         }
